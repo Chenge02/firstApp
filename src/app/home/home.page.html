@@ -8,5 +8,11 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-card>
+    <ion-item *ngFor="let item of bookInfo">
+      <span>
+        {{item.title}}
+      </span>
+    </ion-item>
+  </ion-card>
 </ion-content>

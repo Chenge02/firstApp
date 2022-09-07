@@ -28,7 +28,9 @@ export class BookService {
       `${environment.baseUrl}/movie/${id}?api_key=${environment.apiKey}`
     );
   }
-  searchBook() {
-
+  searchBook(value: string) {
+    return this.http.get<any>(
+      `${environment.baseUrl}/search/movie?api_key=${environment.apiKey}&query=${value}`
+    );
   }
 }
