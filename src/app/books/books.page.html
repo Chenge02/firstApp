@@ -1,11 +1,11 @@
 <ion-header>
   <ion-toolbar >
-    <ion-title>Trending Books</ion-title>
+    <ion-title style="text-align: center ;">Book Search</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchBook($event)" (ionCancel)="onCancel()"></ion-searchbar>
+  <ion-searchbar [(ngModel)]="searchTerm" (ionInput)="searchBook($event)" placeholder="Search Book" ionCancel="" animated></ion-searchbar>
   <ion-list>
     <ion-item button *ngFor="let item of books | filter:searchTerm" [routerLink]="[item.id]">
       <ion-avatar slot="start">
